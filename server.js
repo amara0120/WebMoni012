@@ -1,7 +1,9 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const port = 8080;
+require('dotenv').config();
+
+const port = process.env.port;
 
 app.use('/', express.static(path.join(__dirname, 'public')));
 
